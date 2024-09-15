@@ -12,6 +12,7 @@
   --clr-secondery: rgb(255 255 255 / 55%);
   --clr-secondery-lighter: rgb(255 255 255 / 75%);
   --clr-primary: #0d6efd;
+  --pading-link: 8px;
 }
 
 html {
@@ -21,5 +22,48 @@ html {
 body {
   font-family: "Montserrat Alternates", sans-serif;
   background-color: var(--bg-main);
-  color: var(--main-color);
+  color: var(--clr-main);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 300;
+  color: currentColor;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  color: currentColor;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+label span {
+  display: block;
+  margin-bottom: 0.25rem;
+  text-transform: capitalize;
+  font-size: 14px;
 }

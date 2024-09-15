@@ -1,0 +1,41 @@
+/* OLD SOLUTION USING FLIX && SOME mathmatics from old shool :DDD */
+/* .trending-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  --total-cards-per-line: 0;
+  --header-card-size: 1;
+}
+@media (min-width: 576px) {
+  .trending-section .cards {
+    --total-cards-per-line: 2;
+    --header-card-size: 1;
+  }
+}
+@media (min-width: 768px) {
+  .trending-section .cards {
+    --total-cards-per-line: 4;
+    --header-card-size: 2;
+  }
+}
+@media (min-width: 992px) {
+  .trending-section .cards {
+    --total-cards-per-line: 5;
+    --header-card-size: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .trending-section .cards {
+    --total-cards-per-line: 6;
+    --header-card-size: 2;
+  }
+}
+.trending-section .cards > * {
+  width: calc(
+    (100% - (var(--header-card-size) / var(--total-cards-per-line) * 100%)) /
+      (var(--total-cards-per-line) - var(--header-card-size))
+  );
+}
+.trending-section .cards .trending-card__header {
+  width: calc(var(--header-card-size) / var(--total-cards-per-line) * 100%);
+}
+*/

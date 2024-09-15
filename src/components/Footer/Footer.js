@@ -2,5 +2,13 @@ import React from "react";
 import "./Footer.css";
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return (
+    <footer>
+      <div className="container">
+        <p>
+          Made with &hearts; by <b>Ragab;</b>
+        </p>
+      </div>
+    </footer>
+  );
 }

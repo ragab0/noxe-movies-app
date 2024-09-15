@@ -1,0 +1,9 @@
+.search-form {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.search-form input {
+  border-radius: 50px;
+  padding: var(--pading-link);
+}

@@ -1,0 +1,31 @@
+.overview-card {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.overview-card .rate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--pading-link);
+  background-color: #24baef;
+}
+
+.overview-card img {
+  min-height: 288px;
+  max-height: 400px;
+  /* they are extended to fit the big card height in their row */
+}
+.overview-card figcaption {
+  padding-block: 1rem;
+}
+
+@media (max-width: 576px) {
+  .overview-card {
+    width: 100%;
+    max-width: 350px;
+    margin-inline: auto;
+  }
+}

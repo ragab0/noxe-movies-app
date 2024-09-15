@@ -1,0 +1,69 @@
+/* NEW SOLUTION : using chatGPT - may allah bless him */
+.trending-section .cards {
+  display: grid;
+  gap: 20px;
+  /* grid-template-columns: [col-start] repeat(auto-fit, minmax(100px, 200px)) [col-end]; */
+  grid-template-columns: [col-start] repeat(1, minmax(auto, 1fr)) [col-end];
+  grid-auto-columns: minmax(auto, 1fr);
+  grid-auto-flow: dense;
+}
+@media (min-width: 576px) {
+  .trending-section .cards {
+    grid-template-columns: [col-start] repeat(2, minmax(auto, 1fr)) [col-end];
+  }
+}
+@media (min-width: 768px) {
+  .trending-section .cards {
+    grid-template-columns: [col-start] repeat(3, minmax(auto, 1fr)) [col-end];
+  }
+  .trending-section .cards .trending-card__header {
+    grid-column: span 2 / auto;
+  }
+}
+@media (min-width: 992px) {
+  .trending-section .cards {
+    grid-template-columns: [col-start] repeat(5, minmax(auto, 1fr)) [col-end];
+  }
+}
+@media (min-width: 1200px) {
+  .trending-section .cards {
+    grid-template-columns: [col-start] repeat(6, minmax(auto, 1fr)) [col-end];
+  }
+}
+
+/* Styling our cards */
+/* Styling our cards */
+/* Styling our cards */
+.trending-card__header {
+  display: flex;
+  align-items: center;
+}
+
+.trending-card__header > div {
+  position: relative;
+  border-bottom: 3px solid #a8a8a83d;
+}
+
+.trending-card__header > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 1px;
+  background-color: #a8a8a83d;
+}
+
+.trending-card__header .trending-header-content {
+  max-width: 300px;
+  padding-block: 2rem;
+}
+
+.trending-card__header .trending-header-content p {
+  color: var(--clr-primary);
+}
+
+/* style the cards in this section */
+/* .trending-section .overview-card {
+  max-height: 300px;
+} */
