@@ -1,5 +1,34 @@
+.tabed-section,
+.tabed-section .container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+}
 .tabed-section .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+}
+
+.tabed-section .tabes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.tabed-section button {
+  padding: 8px;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.tabed-section button:hover {
+  opacity: 0.8;
 }

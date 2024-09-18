@@ -11,10 +11,13 @@ import AboutPage from "./pages/About/About";
 import NetworksPage from "./pages/Networks/Networks";
 import LoginPage from "./pages/Login/Login";
 import SignupPage from "./pages/Signup/Signup";
+import Details from "./pages/Details/Details";
+import Pagination from "./pages/pagination";
 
 function App() {
   return (
     <div className="app">
+      {/* <Pagination />; */}
       <Navbar />
       <div className="app-wrapper">
         <Routes>
@@ -24,6 +27,9 @@ function App() {
           <Route path="tv" element={<TvPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="networks" element={<NetworksPage />} />
+          <Route path="details">
+            <Route path=":id" element={<Details />} />
+          </Route>
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignupPage />} />
           <Route path="*" element={<NotFound />} />

@@ -1,12 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { manyItemEdnpoint } from "../../utils/globalAPIEndpoints";
 import OverviewCard from "../OverviewCard/OverviewCard";
-import cards from "../../data/dummyData";
+import useDataFetcher from "../hooks/useDataFetcher";
 import "./TrendingSection.css";
+import Loading from "../Loading/Loading";
 
 export default function TrendingSection({
   sectionName = "Movies",
   hasRate = false,
+  apiTrendingCategory,
 }) {
+  const { data, loading, error } = useDataFetcher(
+    manyItemEdnpoint(apiTrendingCategory)
+  );
+
+  console.log(data);
+
   return (
     <section className="trending-section">
       <div className="container cards">
@@ -20,9 +29,20 @@ export default function TrendingSection({
             <p>Top Trending {sectionName} by Day</p>
           </div>
         </header>
-        {cards.map((card, i) => (
-          <OverviewCard key={i} card={card} hasRate={hasRate} />
-        ))}
+        {loading ? (
+          <Loading />
+        ) : (
+          data?.results
+            ?.slice(0, 10)
+            .map((card, i) => (
+              <OverviewCard
+                key={i}
+                card={card}
+                hasRate={hasRate}
+                apiTrendingCategory={apiTrendingCategory}
+              />
+            ))
+        )}
       </div>
     </section>
   );

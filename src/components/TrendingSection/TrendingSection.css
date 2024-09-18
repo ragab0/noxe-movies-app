@@ -1,4 +1,8 @@
 /* NEW SOLUTION : using chatGPT - may allah bless him */
+.trending-section {
+  margin-bottom: 50px;
+}
+
 .trending-section .cards {
   display: grid;
   gap: 20px;

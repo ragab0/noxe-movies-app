@@ -5,7 +5,11 @@ import TabedSection from "../../components/TabedSection/TabedSection";
 export default function MoviesPage() {
   return (
     <div className="movies-page">
-      <TabedSection hasRate={true} />
+      <TabedSection
+        sectionName={"Movies"}
+        hasRate={true}
+        apiTrendingCategory="movie"
+      />
     </div>
   );
 }

@@ -5,7 +5,11 @@ import TabedSection from "../../components/TabedSection/TabedSection";
 export default function PeoplePage() {
   return (
     <div className="people-page">
-      <TabedSection />
+      <TabedSection
+        sectionName={"People"}
+        hasRate={true}
+        apiTrendingCategory="person"
+      />
     </div>
   );
 }
